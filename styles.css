@@ -1,0 +1,253 @@
+/* Enhanced Color Scheme */
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary: #f59e0b;
+    --secondary-dark: #d97706;
+    --accent: #10b981;
+    --accent-dark: #059669;
+    --warning: #ef4444;
+    --warning-dark: #dc2626;
+    --success: #22c55e;
+    --success-dark: #16a34a;
+    --info: #3b82f6;
+    --info-dark: #2563eb;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --gray-900: #0f172a;
+}
+
+/* Enhanced gradient text */
+.gradient-text {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Enhanced hero gradient */
+.hero-gradient {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 50%, #f3e8ff 100%);
+}
+
+/* Enhanced card hover effects */
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
+}
+
+.resource-card:hover .download-btn,
+.resource-card:hover .favorite-btn {
+    opacity: 1;
+}
+
+/* Enhanced button styles */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--secondary-dark), var(--secondary));
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Enhanced category badges */
+.badge-math {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+}
+
+.badge-physics {
+    background: linear-gradient(135deg, var(--warning), var(--warning-dark));
+    color: white;
+}
+
+.badge-programming {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: white;
+}
+
+.badge-electronics {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    color: white;
+}
+
+.badge-evs {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    color: white;
+}
+
+/* Enhanced progress bars */
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transition: width 0.3s ease;
+}
+
+/* Enhanced notification colors */
+.notification-success {
+    background: linear-gradient(135deg, var(--success), var(--success-dark));
+    color: white;
+}
+
+.notification-error {
+    background: linear-gradient(135deg, var(--warning), var(--warning-dark));
+    color: white;
+}
+
+.notification-info {
+    background: linear-gradient(135deg, var(--info), var(--info-dark));
+    color: white;
+}
+
+.notification-warning {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    color: white;
+}
+
+/* Enhanced filter buttons */
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.filter-btn:hover:not(.active) {
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+    transform: translateY(-1px);
+}
+
+/* Enhanced modal styles */
+.modal-content {
+    background: linear-gradient(135deg, white, var(--gray-50));
+    border: 1px solid var(--gray-200);
+}
+
+/* Enhanced input focus states */
+.input-focus:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Enhanced stats cards */
+.stats-card {
+    background: linear-gradient(135deg, white, var(--gray-50));
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.1);
+}
+
+/* Enhanced resource cards */
+.resource-card {
+    background: linear-gradient(135deg, white, var(--gray-50));
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
+}
+
+/* Enhanced navigation */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Improved background and text colors for better readability */
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.text-gray-600 {
+    color: #4b5563 !important;
+}
+
+.text-gray-800 {
+    color: #1f2937 !important;
+}
+
+.border-gray-100 {
+    border-color: #f3f4f6 !important;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Enhanced mobile menu */
+#mobile-menu {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Enhanced FAQ section */
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+}
+
+/* Enhanced contact section */
+.contact-info {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+/* Enhanced footer */
+footer {
+    background-color: #f8fafc;
+    color: #374151;
+} 

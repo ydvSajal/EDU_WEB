@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 CGPA - Ace Your First Year Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">10 CGPA</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#resources" class="nav-link text-gray-600 hover:text-indigo-600 transition">Resources</a>
+                    <a href="#semesters" class="nav-link text-gray-600 hover:text-indigo-600 transition">Semesters</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 transition">About</a>
+                    <button id="login-btn" class="nav-link text-gray-600 hover:text-indigo-600 transition">Login</button>
+                    <button id="signup-btn" class="btn-primary px-4 py-2 rounded-md transition">Sign Up</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#resources" class="text-gray-600 hover:text-indigo-600 transition py-2 border-b">Resources</a>
+                <a href="#semesters" class="text-gray-600 hover:text-indigo-600 transition py-2 border-b">Semesters</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition py-2 border-b">About</a>
+                <button id="mobile-login-btn" class="text-gray-600 hover:text-indigo-600 transition py-2 border-b text-left">Login</button>
+                <button id="mobile-signup-btn" class="btn-primary px-4 py-2 rounded-md hover:bg-indigo-700 transition w-full text-center">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="block">ACE YOUR</span>
+                        <span class="block">FIRST YEAR</span>
+                        <span class="block gradient-text">JOURNEY</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        Complete study materials, curated YouTube playlists, and previous year papers for Semester 1 & 2. Your path to academic excellence starts here.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="btn-primary px-6 py-3 rounded-md font-medium">
+                            Explore Resources
+                        </button>
+                        <button class="btn-secondary px-6 py-3 rounded-md font-medium">
+                            Watch Videos
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-full h-full bg-blue-100 rounded-2xl absolute -bottom-3 -right-3 -z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Students studying" 
+                             class="rounded-2xl shadow-xl w-full max-w-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Trusted by students nationwide</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">200+ students achieved 9+ CGPA with our resources</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                <div class="stats-card p-6 rounded-xl shadow-md text-center card-hover transition">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">500+</div>
+                    <div class="text-gray-600">Study Resources</div>
+                    <div class="text-emerald-500 text-sm mt-2">+25% this month</div>
+                </div>
+                <div class="stats-card p-6 rounded-xl shadow-md text-center card-hover transition">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">30+</div>
+                    <div class="text-gray-600">Video Playlists</div>
+                    <div class="text-emerald-500 text-sm mt-2">+15% this month</div>
+                </div>
+                <div class="stats-card p-6 rounded-xl shadow-md text-center card-hover transition">
+                    <div class="text-4xl font-bold text-amber-600 mb-2">1200+</div>
+                    <div class="text-gray-600">Active Students</div>
+                    <div class="text-emerald-500 text-sm mt-2">+30% this month</div>
+                </div>
+                <div class="stats-card p-6 rounded-xl shadow-md text-center card-hover transition">
+                    <div class="text-4xl font-bold text-emerald-600 mb-2">200+</div>
+                    <div class="text-gray-600">9+ CGPA Achievers</div>
+                    <div class="text-emerald-500 text-sm mt-2">Success Stories</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="px-6 py-3 badge-math rounded-full font-medium">Mathematics</div>
+                <div class="px-6 py-3 badge-physics rounded-full font-medium">Physics</div>
+                <div class="px-6 py-3 badge-programming rounded-full font-medium">Web Dev</div>
+                <div class="px-6 py-3 badge-programming rounded-full font-medium">Programming</div>
+                <div class="px-6 py-3 badge-electronics rounded-full font-medium">Electronics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Resources -->
+    <section id="semesters" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Academic Resources</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Organized materials for all your semester needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="stats-card p-8 rounded-xl shadow-md card-hover transition">
+                    <div class="bg-gradient-to-br from-indigo-100 to-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book-open text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Semester 1</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Calculus</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Physics</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Environment</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Programming</li>
+                    </ul>
+                    <button class="mt-6 text-indigo-600 font-medium hover:text-indigo-800 transition">View All →</button>
+                </div>
+                
+                <div class="stats-card p-8 rounded-xl shadow-md card-hover transition">
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Semester 2</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-500 mr-2"></i> Linear Algebra</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-500 mr-2"></i> Electronics</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-500 mr-2"></i> Digital Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-purple-500 mr-2"></i> Discrete Maths</li>
+                    </ul>
+                    <button class="mt-6 text-purple-600 font-medium hover:text-purple-800 transition">View All →</button>
+                </div>
+                
+                <div class="stats-card p-8 rounded-xl shadow-md card-hover transition">
+                    <div class="bg-gradient-to-br from-emerald-100 to-teal-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Programming & Coding</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Java</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Python</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Web Development</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-2"></i> Data Structures</li>
+                    </ul>
+                    <button class="mt-6 text-emerald-600 font-medium hover:text-emerald-800 transition">View All →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Planner Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Study Planner</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Plan your study sessions and track your progress</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Today's Schedule</h3>
+                    <div id="today-schedule" class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                            <div>
+                                <div class="font-medium">Mathematics</div>
+                                <div class="text-sm text-gray-600">9:00 AM - 11:00 AM</div>
+                            </div>
+                            <button class="text-green-600 hover:text-green-800">
+                                <i class="fas fa-check-circle"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+                            <div>
+                                <div class="font-medium">Physics</div>
+                                <div class="text-sm text-gray-600">2:00 PM - 4:00 PM</div>
+                            </div>
+                            <button class="text-gray-400 hover:text-green-600">
+                                <i class="far fa-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="mt-4 text-blue-600 hover:text-blue-800 font-medium">Add New Session →</button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Study Progress</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Mathematics</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="progress-bar h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Physics</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-red-500 to-orange-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Programming</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-emerald-500 to-teal-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mt-4 text-blue-600 hover:text-blue-800 font-medium">View Full Progress →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Resources Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Video Tutorials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Learn from expert instructors with our curated video playlists</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Calculus Tutorial" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <button id="play-btn-1" class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-gray-800 text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Calculus Fundamentals</h3>
+                        <p class="text-gray-600 mb-4">Complete calculus course for semester 1 students</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">15 videos • 3.5 hours</span>
+                            <button id="watch-now-1" class="text-blue-600 hover:text-blue-800 font-medium">Watch Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Physics Tutorial" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <button id="play-btn-2" class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-gray-800 text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Physics Lab Experiments</h3>
+                        <p class="text-gray-600 mb-4">Hands-on physics experiments and demonstrations</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">12 videos • 2.8 hours</span>
+                            <button id="watch-now-2" class="text-blue-600 hover:text-blue-800 font-medium">Watch Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Programming Tutorial" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <button id="play-btn-3" class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition">
+                                <i class="fas fa-play text-gray-800 text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Java Programming</h3>
+                        <p class="text-gray-600 mb-4">Learn Java from basics to advanced concepts</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">20 videos • 4.2 hours</span>
+                            <button id="watch-now-3" class="text-blue-600 hover:text-blue-800 font-medium">Watch Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Resources -->
+    <section id="resources" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Study Resources</h2>
+                    <p class="text-gray-600">9 resources available</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="Search resources..." class="pl-10 pr-4 py-2 border rounded-lg w-full md:w-64 input-focus focus:outline-none">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <div class="mt-2 flex flex-wrap gap-2">
+                        <button class="filter-btn active px-3 py-1 text-sm bg-blue-100 text-blue-800 rounded-full" data-filter="all">All</button>
+                        <button class="filter-btn px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full" data-filter="mathematics">Mathematics</button>
+                        <button class="filter-btn px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full" data-filter="physics">Physics</button>
+                        <button class="filter-btn px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full" data-filter="programming">Programming</button>
+                        <button class="filter-btn px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full" data-filter="electronics">Electronics</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Resource 1 -->
+                <div class="resource-card rounded-xl shadow-md overflow-hidden border border-gray-100 transition">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="badge-math text-xs font-medium px-2.5 py-0.5 rounded">Mathematics</span>
+                            </div>
+                            <div class="flex items-center text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Calculus sem 1</h3>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span>1,250 downloads</span>
+                            <span>2.3 MB</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="favorite-btn opacity-0 w-1/2 bg-gray-100 text-gray-600 py-2 rounded-md hover:bg-gray-200 transition flex items-center justify-center" data-resource="calculus-sem1">
+                                <i class="far fa-heart mr-2"></i> Favorite
+                            </button>
+                            <a href="/downloads/calculus-sem1.pdf" download="Calculus-Sem1.pdf" class="download-btn opacity-0 w-1/2 btn-primary py-2 rounded-md transition flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="resource-card rounded-xl shadow-md overflow-hidden border border-gray-100 transition">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="badge-evs text-xs font-medium px-2.5 py-0.5 rounded">Evs</span>
+                            </div>
+                            <div class="flex items-center text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.7</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Environment</h3>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span>1,226 downloads</span>
+                            <span>3.8 MB</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="favorite-btn opacity-0 w-1/2 bg-gray-100 text-gray-600 py-2 rounded-md hover:bg-gray-200 transition flex items-center justify-center" data-resource="environment">
+                                <i class="far fa-heart mr-2"></i> Favorite
+                            </button>
+                            <a href="/downloads/environment.pdf" download="Environment-Study-Material.pdf" class="download-btn opacity-0 w-1/2 btn-primary py-2 rounded-md transition flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="resource-card rounded-xl shadow-md overflow-hidden border border-gray-100 transition">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="badge-programming text-xs font-medium px-2.5 py-0.5 rounded">Programming</span>
+                            </div>
+                            <div class="flex items-center text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Java</h3>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span>1,117 downloads</span>
+                            <span>5.2 MB</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="favorite-btn opacity-0 w-1/2 bg-gray-100 text-gray-600 py-2 rounded-md hover:bg-gray-200 transition flex items-center justify-center" data-resource="java-programming">
+                                <i class="far fa-heart mr-2"></i> Favorite
+                            </button>
+                            <a href="/downloads/java-programming.pdf" download="Java-Programming.pdf" class="download-btn opacity-0 w-1/2 btn-primary py-2 rounded-md transition flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource 4 -->
+                <div class="resource-card rounded-xl shadow-md overflow-hidden border border-gray-100 transition">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="badge-physics text-xs font-medium px-2.5 py-0.5 rounded">Physics</span>
+                            </div>
+                            <div class="flex items-center text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.5</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Electronics</h3>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span>1,103 downloads</span>
+                            <span>1.2 MB</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="favorite-btn opacity-0 w-1/2 bg-gray-100 text-gray-600 py-2 rounded-md hover:bg-gray-200 transition flex items-center justify-center" data-resource="electronics">
+                                <i class="far fa-heart mr-2"></i> Favorite
+                            </button>
+                            <a href="/downloads/electronics.pdf" download="Electronics-Notes.pdf" class="download-btn opacity-0 w-1/2 btn-primary py-2 rounded-md transition flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 resource-card transition">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Digital Design</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Digital Design</h3>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span>1,100 downloads</span>
+                            <span>3.5 MB</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="favorite-btn opacity-0 w-1/2 bg-gray-100 text-gray-600 py-2 rounded-md hover:bg-gray-200 transition flex items-center justify-center" data-resource="digital-design">
+                                <i class="far fa-heart mr-2"></i> Favorite
+                            </button>
+                            <a href="/downloads/digital-design.pdf" download="Digital-Design.pdf" class="download-btn opacity-0 w-1/2 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 resource-card transition">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Programming</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.4</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Python Study Material</h3>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span>1,050 downloads</span>
+                            <span>1.2 MB</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="favorite-btn opacity-0 w-1/2 bg-gray-100 text-gray-600 py-2 rounded-md hover:bg-gray-200 transition flex items-center justify-center" data-resource="python">
+                                <i class="far fa-heart mr-2"></i> Favorite
+                            </button>
+                            <a href="/downloads/python.pdf" download="Python-Study-Material.pdf" class="download-btn opacity-0 w-1/2 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition flex items-center justify-center">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition font-medium">
+                    Load More Resources
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers Section -->
+    <section id="developers" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Meet Our Developers</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">The talented team behind 10 CGPA</p>
+            </div>
+            
+            <div class="flex justify-center">
+                <!-- Developer 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start card-hover transition max-w-md">
+                    <div class="w-20 h-20 rounded-full overflow-hidden mr-6 flex-shrink-0">
+                        <img src="https://ydvsajal.github.io/S.P/PIC.jpg" 
+                             alt="Sajal yadav" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Sajal Yadav</h3>
+                        <p class="text-gray-600 mb-3">Tech</p>
+                        <div class="flex space-x-4 text-blue-600">
+                            <a href="https://linkedin.com/in/sajalyadav" class="hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/sajalyadav" class="hover:text-blue-800"><i class="fab fa-github"></i></a>
+                            <a href="https://twitter.com/sajalyadav" class="hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our resources</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-semibold">How do I download study materials?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t">
+                        <p class="text-gray-600">Simply click on the download button on any resource card. You'll need to be logged in to track your downloads.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-semibold">Are the resources free to download?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t">
+                        <p class="text-gray-600">Yes, all our study materials are completely free for students. We believe in making quality education accessible to everyone.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-semibold">How often are new resources added?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t">
+                        <p class="text-gray-600">We regularly update our resource library with new materials, typically adding new content every week.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-semibold">Can I request specific study materials?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t">
+                        <p class="text-gray-600">Absolutely! Use our contact form to request specific materials, and we'll do our best to add them to our library.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or suggestions? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                            <span>contact@10cgpa.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-600 mr-3"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+                            <span>Delhi, India</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-facebook-f text-xl"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-twitter text-xl"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <button id="contact-btn" class="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition font-medium">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Send us a Message
+                    </button>
+                    
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <h4 class="font-bold mb-2">Quick Support</h4>
+                        <p class="text-sm text-gray-600 mb-3">Need immediate help? Our support team is available 24/7.</p>
+                        <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                            Start Live Chat →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Excel?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Join thousands of students who have achieved academic excellence with our comprehensive study resources.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-md hover:bg-gray-100 transition font-medium">
+                    Get Started Now
+                </button>
+                <button class="border border-white text-white px-8 py-3 rounded-md hover:bg-white hover:bg-opacity-10 transition font-medium">
+                    Browse Resources
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 gradient-text">10 CGPA</h3>
+                    <p class="text-gray-400">
+                        Your complete resource for first year engineering studies.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/study-materials" class="text-gray-400 hover:text-white transition">Study Materials</a></li>
+                        <li><a href="/video-playlists" class="text-gray-400 hover:text-white transition">Video Playlists</a></li>
+                        <li><a href="/previous-papers" class="text-gray-400 hover:text-white transition">Previous Year Papers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Semesters</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/semester1" class="text-gray-400 hover:text-white transition">Semester 1</a></li>
+                        <li><a href="/semester2" class="text-gray-400 hover:text-white transition">Semester 2</a></li>
+                        <li><a href="/programming" class="text-gray-400 hover:text-white transition">Programming</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://facebook.com/10cgpa" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/10cgpa" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/10cgpa" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/10cgpa" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="text-gray-400">contact@10cgpa.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>© 2023 10 CGPA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content rounded-lg shadow-xl max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Login</h3>
+                    <button id="close-login" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <form id="login-form">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="login-email" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Password</label>
+                        <input type="password" id="login-password" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-3 rounded-lg transition">Login</button>
+                </form>
+                <p class="text-center mt-4 text-gray-600">
+                    Don't have an account? 
+                    <button id="show-signup" class="text-blue-600 hover:text-blue-800">Sign Up</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content rounded-lg shadow-xl max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Sign Up</h3>
+                    <button id="close-signup" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <form id="signup-form">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="signup-name" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="signup-email" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Password</label>
+                        <input type="password" id="signup-password" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-3 rounded-lg transition">Sign Up</button>
+                </form>
+                <p class="text-center mt-4 text-gray-600">
+                    Already have an account? 
+                    <button id="show-login" class="text-blue-600 hover:text-blue-800">Login</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Dashboard Modal -->
+    <div id="dashboard-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content rounded-lg shadow-xl max-w-4xl w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">My Dashboard</h3>
+                    <button id="close-dashboard" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-2">Download History</h4>
+                        <div id="download-history" class="space-y-2">
+                            <p class="text-gray-600">No downloads yet</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-2">Favorites</h4>
+                        <div id="favorites-list" class="space-y-2">
+                            <p class="text-gray-600">No favorites yet</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-2">Study Progress</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Mathematics</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content rounded-lg shadow-xl max-w-md w-full p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Contact Us</h3>
+                    <button id="close-contact" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="contact-name" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="contact-email" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Subject</label>
+                        <select id="contact-subject" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="content">Content Request</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="contact-message" rows="4" class="w-full p-3 border rounded-lg input-focus focus:outline-none" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-3 rounded-lg transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
