@@ -216,6 +216,13 @@ document.querySelectorAll('.download-btn').forEach(btn => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        
+        // Update download count (simulate)
+        const downloadCount = resourceCard.querySelector('.text-sm.text-gray-500 span:first-child');
+        if (downloadCount) {
+            const currentCount = parseInt(downloadCount.textContent.replace(/\D/g, ''));
+            downloadCount.textContent = `${currentCount + 1} downloads`;
+        }
     });
 });
 
